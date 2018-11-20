@@ -14,16 +14,16 @@ Contains a main method to demonstrate the functionality of the solution.
   <li>Runs a streamlined test method to output a series of test cases in table format</li>
 </ul>
 
-Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters:<br/>  
-An instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implementd in the main method, but they are separated for readability and increased agency for the user.
+Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters, an instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implementd in the main method, but they are separated for readability and increased agency for the user.
 
 <h4>Using manualTesting</h4>
-<code>manualTesting</code> takes 
+<code>manualTesting</code> is used to generate a basket manually, instantiating the Item objects and adding them to the basket. 
 
 <h4>Using runExampleTests</h4>
 To customize the tests in the program, simply add or remove the 
 <code>testing("BBBBCCC");</code> statements or edit the parameter values therein.
 <small>NOTE: Parameter values are strings consisting of a combination of any valid item type (A-->E)</small>
+The method then runs <code>testing()</code> to iterate through the string entered and creates an array of items for each character in the string (the character corresponding to the type of the item). The method then calculates the pricing for each basket and outputs the results in a table format.
 
 <code>manualTesting</code> is used to handle code as given in the GitHub specification. In the current exameple, variables are declared and the snippet of code given in the specification is used to generate the resulting pricing.
   
