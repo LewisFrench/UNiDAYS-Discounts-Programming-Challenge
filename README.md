@@ -17,7 +17,7 @@ Contains a main method to demonstrate the functionality of the solution.
 Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters, an instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implemented in the main method, but they are separated for readability and increased agency for the user.
 
 <h4>Using manualTesting</h4>
-<code>manualTesting</code> is used to generate a basket manually, instantiating the Item objects and adding them to the basket. The  
+<code>manualTesting</code> is used to generate a basket manually, instantiating the Item objects and adding them to the basket. Each variable must be instantiated manually, as opposed to automatically generated in an array. This method was implemented first to ensure a basket could be created and priced correctly, before moving on to more hands-off testing. 
 
 <h4>Using runExampleTests</h4>
 To customize the tests in the program, simply add or remove the 
@@ -39,5 +39,5 @@ I approached this problem by looking at the example implementation snippet given
 After that, I constructed a skeleton of the larger classes and began to plan how I'd implement some of the larger algorithms. I also decided on how I'd use data structures to store data in certain classes. After the most important logical code was implemented, I handled the rest of the object-oriented tasks to ensure I could access necessary methods from other classes where necessary.
 
 Once I had finished the program, I develped a main method so that I could check that the algorithms were working correctly. I used <code>manualTesting</code> to ensure that I could add items individually to a basket and calculate the total, then <code>runExampleTests</code> to run a large number of tests to see if I made any logical errors in the code.
-
+I ran the code against the values shown in the specification in order to determine if my solution accurately calculated the prices.
 
