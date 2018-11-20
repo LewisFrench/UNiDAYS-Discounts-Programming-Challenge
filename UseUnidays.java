@@ -23,6 +23,7 @@ public class UseUnidays {
 		Price result;
 		double totalPrice;
 		double deliveryCharge;
+		@SuppressWarnings("unused") // Used to suppress warning from use of example code
 		double overallTotal;
 
 		/* Testing from GitHub specification example 
