@@ -23,5 +23,5 @@ To customize the tests in the program, simply add or remove the
 The output generated from the program is given in a table format, as shown below :
 <pre><code>
  Items       | Total   | Delivery Charge| Overall Cost
-None         |£0.00    |£0.00           |£0.00         
+BBBBCCC      |£50.00   |£0.00           |£50.00         
 </code></pre>
