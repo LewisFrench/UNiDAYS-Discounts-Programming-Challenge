@@ -12,8 +12,10 @@ Contains a main method to demonstrate the functionality of the solution.
   <li>Calls the PricingRules .toString method to display item prices</li>
   <li>Provides example implementation based on the code given on the GitHub specification</li>
   <li>Runs a streamlined test method to output a series of test cases in table format</li>
-</ul>testing("BBBBCCC");</code>
+</ul>
 
 To customize the tests in the program, simply add or remove the 
-<code>testing("BBBBCCC");</code>
+<code>testing("BBBBCCC");</code> statements or edit the <code>char</code> therein.
+  
+
 
