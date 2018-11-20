@@ -36,4 +36,13 @@ public class UnidaysDiscountChallenge{
 
 		return new Price(totalPrice, deliveryCharge);
 	}
+	
+	public String basketToString(){
+		String output = "";
+		for (Item item : basket){
+			output +=item.getType();
+			
+		}
+		return output;
+	}
 }

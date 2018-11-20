@@ -7,4 +7,7 @@ public class Price {
 		this.Total = Total;
 		this.DeliveryCharge = DeliveryCharge;
 	}
+	public String toString(){
+		return String.format("|£%-8.2f|£%-15.2f|£%-13.2f", Total, DeliveryCharge, Total+DeliveryCharge);
+	}
 }
