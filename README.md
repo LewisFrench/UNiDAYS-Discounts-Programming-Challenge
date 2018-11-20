@@ -14,6 +14,13 @@ Contains a main method to demonstrate the functionality of the solution.
   <li>Runs a streamlined test method to output a series of test cases in table format</li>
 </ul>
 
+Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters:<br/>  
+An instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implementd in the main method, but they are separated for readability and increased agency for the user.
+
+<h4>Using manualTesting</h4>
+<code>manualTesting</code> takes 
+
+<h4>Using runExampleTests</h4>
 To customize the tests in the program, simply add or remove the 
 <code>testing("BBBBCCC");</code> statements or edit the parameter values therein.
 <small>NOTE: Parameter values are strings consisting of a combination of any valid item type (A-->E)</small>
@@ -24,6 +31,8 @@ The output generated from the program is given in a table format, as shown below
 <pre><code>Items        |Total    |Delivery Charge |Overall Cost 
 BBBBCCC      |£50.00   |£0.00           |£50.00         
 </code></pre>
+
+<h3>How I approached the program</h3>
 
 I approached this problem by looking at the example implementation snippet given on the project specification, which hinted at certain design structures. I started with smaller classes like <code>Price</code> and <code>Item</code>. 
 
