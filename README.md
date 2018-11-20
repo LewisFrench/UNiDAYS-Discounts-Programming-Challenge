@@ -20,5 +20,11 @@ To customize the tests in the program, simply add or remove the
 
 <code>manualTesting</code> is used to handle code as given in the GitHub specification. In the current exameple, variables are declared and the snippet of code given in the specification is used to generate the resulting pricing.
   
-
-
+The output generated from the program is given in a table format, as shown below :
+<code>
+ Items          | Total   | Delivery Charge| Overall Cost
+None            |£0.00    |£0.00           |£0.00         
+A               |£8.00    |£7.00           |£15.00        
+B               |£12.00   |£7.00           |£19.00        
+C               |£4.00    |£7.00           |£11.00 
+</code>
