@@ -15,7 +15,10 @@ Contains a main method to demonstrate the functionality of the solution.
 </ul>
 
 To customize the tests in the program, simply add or remove the 
-<code>testing("BBBBCCC");</code> statements or edit the <code>char</code> therein.
+<code>testing("BBBBCCC");</code> statements or edit the parameter values therein.
+<small>NOTE: Parameter values are strings consisting of a combination of any valid item type (A-->E)</small>
+
+<code>manualTesting</code> is used to handle code as given in the GitHub specification. In the current exameple, variables are declared and the snippet of code given in the specification is used to generate the resulting pricing.
   
 
 
