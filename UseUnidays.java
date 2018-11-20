@@ -7,17 +7,19 @@ public class UseUnidays {
 		//Outputs the price rules in a short table
 		System.out.println(pricingRules.toString());
 		
-		
-		 /* Efficient and simple method to test certain baskets
-		 *  Users write a string containing any combination of valid object types (A-->E)
-		 *  Method handles strings and calculates the price for each basket used 
-		 *  method to test efficiently, currently runs all example tests given in the GitHub specification*/
+		// Run the test cases provided on the GitHub
 		runExampleTests(example, pricingRules);
 		
+		// Runs the example implementation given on GitHub
+		manualTesting(example,pricingRules);
 		
+	}
+	
+	
+	public static void manualTesting(UnidaysDiscountChallenge example, PricingRules pricingRules){
 		// Variable declaration for example testing
-		Item itemOne = new Item('B');
-		Item itemTwo = new Item('B');
+		Item itemOne = new Item('E');
+		Item itemTwo = new Item('E');
 		Price result;
 		double totalPrice;
 		double deliveryCharge;
@@ -26,6 +28,7 @@ public class UseUnidays {
 		/* Testing from GitHub specification example 
 		 * Runs code verbatim to demonstrate desired functionality
 		 */	
+		
 		example = new UnidaysDiscountChallenge(pricingRules);
 		
 		example.AddToBasket(itemOne);
@@ -36,19 +39,26 @@ public class UseUnidays {
 		totalPrice = result.Total;
 		deliveryCharge = result.DeliveryCharge;
 		overallTotal = totalPrice + deliveryCharge;
+		// end of example implementation from GitHub
+		
 		
 		// Output added to display results
-		System.out.printf("\n\n%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
+		System.out.println("\n\nBaskets from manualTesting()");
+		System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
 		testingOutput(example.basketToString(), result);
-		
 	}
-	/* Testing using string handling
-	 * TO USE 
-	 * Fill string with a series of item types, a table will be output
-	 * one table row is generated per string entered
-	 */
+	
+	
+	
+	
+	
+	 /* Efficient and simple method to test certain baskets
+	 *  Users write a string containing any combination of valid object types (A-->E)
+	 *  Method handles strings and calculates the price for each basket used 
+	 *  method to test efficiently, currently runs all example tests given in the GitHub specification*/
 	public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
 		//	Outputs a series of headings to form a table once tests are run
+		System.out.println("Baskets from runExampleTests()");
 		System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
 		
 		// Runs fast tests using string handling to separate item values
@@ -73,7 +83,7 @@ public class UseUnidays {
 		testing("ABBCCCDDEE");
 		testing("EDCBAEDCBC");
 	}
-		
+	// Method used to separate items in strings from runExampleTests
 	public static void testing(String itemString){
 		// instantiate new instances of PricingRules and UnidaysDiscountChallenge
 		PricingRules p = new PricingRules();
@@ -91,15 +101,16 @@ public class UseUnidays {
 		// Creates instance of Price with values used from the calculation of the price
 		Price result = example.CalculateTotalPrice();
 		// outputs results in separate method for readability
+		// Generates a table row for each of the strings entered
 		testingOutput(itemString,result);		
 	}
 	
 	public static void testingOutput(String s, Price result){
+		// outputs "None" if the basket is empty in place of the items
 		if (s == ""){
 			s = "None";
 		}
-		// Calculates sum of the two pricing components
-		double overallTotal = result.Total + result.DeliveryCharge;
+
 		// outputs a row of data to contribute to testing table
 		System.out.printf(String.format("\n%-16s", s) + result.toString());
 
