@@ -9,15 +9,15 @@ Contains a main method to demonstrate the functionality of the solution.
   
 <ul>
   <li>Creates instance of PricingRules and UnidaysDiscountChallenge</li>
-  <li>Calls the PricingRules .toString method to display item prices</li>
+  <li>Calls the PricingRules <code>.toString</code> method to display item prices</li>
   <li>Provides example implementation based on the code given on the GitHub specification</li>
   <li>Runs a streamlined test method to output a series of test cases in table format</li>
 </ul>
 
-Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters, an instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implementd in the main method, but they are separated for readability and increased agency for the user.
+Both methods used to run the program (<code>manualTesting</code> and <code>runExampleTests</code>) take two objects as parameters, an instance of <code>UnidaysDiscountChallenge</code> and an instance of  <code>PricingRules</code>. The code from both methods could be implemented in the main method, but they are separated for readability and increased agency for the user.
 
 <h4>Using manualTesting</h4>
-<code>manualTesting</code> is used to generate a basket manually, instantiating the Item objects and adding them to the basket. 
+<code>manualTesting</code> is used to generate a basket manually, instantiating the Item objects and adding them to the basket. The  
 
 <h4>Using runExampleTests</h4>
 To customize the tests in the program, simply add or remove the 
