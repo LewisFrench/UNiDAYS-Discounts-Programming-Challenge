@@ -4,7 +4,7 @@ My solution for the Industrial Placement challenge
 <h3> Using the program </h3>
 <b>UsingUnidays</b> is added to allow a user to run tests on the systems.
 Contains a main method to demonstrate the functionality of the solution.
-<br/>
+<br/>     
 <ul>
   <li>Creates instance of PricingRules and UnidaysDiscountChallenge</li>
   <li>Calls the PricingRules .toString method to display item prices</li>
