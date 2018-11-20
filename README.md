@@ -25,7 +25,7 @@ To customize the tests in the program, simply add or remove the
 <small>NOTE: Parameter values are strings consisting of a combination of any valid item type (A-->E)</small>
 The method then runs <code>testing()</code> to iterate through the string entered and creates an array of items for each character in the string (the character corresponding to the type of the item). The method then calculates the pricing for each basket and outputs the results in a table format.
 
-<code>manualTesting</code> is used to handle code as given in the GitHub specification. In the current exameple, variables are declared and the snippet of code given in the specification is used to generate the resulting pricing.
+<code>manualTesting</code> is used to handle code as given in the GitHub specification. In the current example, variables are declared and the snippet of code given in the specification is used to generate the resulting pricing.
   
 The output generated from the program is given in a table format, as shown below :
 <pre><code>Items        |Total    |Delivery Charge |Overall Cost 
