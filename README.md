@@ -27,5 +27,8 @@ BBBBCCC      |£50.00   |£0.00           |£50.00
 
 I approached this problem by looking at the example implementation snippet given on the project specification, which hinted at certain design structures. I started with smaller classes like <code>Price</code> and <code>Item</code>. 
 
-After that, I constructed a skeleton of the larger classes and began to form decisions about data structures and algorithms. 
+After that, I constructed a skeleton of the larger classes and began to plan how I'd implement some of the larger algorithms. I also decided on how I'd use data structures to store data in certain classes. After the most important logical code was implemented, I handled the rest of the object-oriented tasks to ensure I could access necessary methods from other classes where necessary.
+
+Once I had finished the program, I develped a main method so that I could check that the algorithms were working correctly. I used <code>manualTesting</code> to ensure that I could add items individually to a basket and calculate the total, then <code>runExampleTests</code> to run a large number of tests to see if I made any logical errors in the code.
+
 
