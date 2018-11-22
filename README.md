@@ -92,6 +92,7 @@ None            |£0.00    |£0.00           |£0.00
 A               |£8.00    |£7.00           |£15.00          
 ABBCCCDDEE      |£55.00   |£0.00           |£55.00        
 EDCBAEDCBC      |£55.00   |£0.00           |£55.00</code></pre>
+
 <h3>How I approached the program</h3>
 
 I approached this problem by looking at the example implementation snippet given on the project specification, which hinted at certain design structures. I started with smaller classes like <code>Price</code> and <code>Item</code>. 
