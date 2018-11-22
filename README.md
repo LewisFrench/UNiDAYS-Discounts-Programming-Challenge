@@ -65,13 +65,11 @@ BBBBCCC      |£50.00   |£0.00           |£50.00
 
 	String displayString = example.basketToString();
 	testingOutput(displayString, result);
-	
 }</code></pre>
 which produces output :
-<pre>
-<code>Baskets from manualTesting()
- Items          | Total   | Delivery Charge| Overall Cost
-EEB             |£22.00   |£7.00           |£29.00</code></pre>
+<pre><code>Baskets from manualTesting()
+Items          |Total    |Delivery Charge |Overall Cost
+EEB            |£22.00   |£7.00           |£29.00</code></pre>
 <h4>Using <code>runExampleTests</code></h4>
 <pre><code>public static void main(String[] args){
 
