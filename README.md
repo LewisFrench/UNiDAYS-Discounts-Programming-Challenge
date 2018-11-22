@@ -31,6 +31,21 @@ The output generated from the program is given in a table format, as shown below
 <pre><code>Items        |Total    |Delivery Charge |Overall Cost 
 BBBBCCC      |£50.00   |£0.00           |£50.00         
 </code></pre>
+<code><pre>
+<h3>Example use</h3>
+	public static void manualTesting(UnidaysDiscountChallenge example, PricingRules pricingRules){
+		
+		Item itemOne = new Item('E');
+		Item itemTwo = new Item('E');
+    Price result;
+
+    example = new UnidaysDiscountChallenge(pricingRules);
+    example.AddToBasket(itemOne);
+		example.AddToBasket(itemTwo);
+
+    result = example.CalculateTotalPrice();
+    testingOutput(example.basketToString(), result);
+  }</code></pre>
 
 <h3>How I approached the program</h3>
 
