@@ -29,7 +29,6 @@ The output generated from the program is given in a table format, as shown below
 <pre><code>Baskets from runExampleTests()
 Items        |Total    |Delivery Charge |Overall Cost 
 BBBBCCC      |£50.00   |£0.00           |£50.00
-ABBCCCDDEE   |£55.00   |£0.00           |£55.00  
 </code></pre>
 
 <h3>Example use</h3>
@@ -75,6 +74,11 @@ public static void main(String[] args){
 	testingOutput(displayString, result);
 	
 }</code></pre>
+which produces output :
+<pre>
+<code>Baskets from manualTesting()
+ Items          | Total   | Delivery Charge| Overall Cost
+EEB             |£22.00   |£7.00           |£29.00</code></pre>
 
 <h3>How I approached the program</h3>
 
