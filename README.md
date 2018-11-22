@@ -89,7 +89,7 @@ public static void runExampleTests(UnidaysDiscountChallenge example, PricingRule
 	testing("ABBCCCDDEE");
 	testing("EDCBAEDCBC");
 	
-}</pre></code
+}</pre></code>
 Produces output
 <pre><code>Baskets from runExampleTests()
 Items           |Total    |Delivery Charge |Overall Cost
