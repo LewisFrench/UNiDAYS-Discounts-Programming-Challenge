@@ -88,7 +88,7 @@ EEB            |£22.00   |£7.00           |£29.00</code></pre>
     testing("ABBCCCDDEE");
     testing("EDCBAEDCBC");
     
-}</pre></code>
+}</code></pre>
 Produces output
 <pre><code>Baskets from runExampleTests()
 Items           |Total    |Delivery Charge |Overall Cost
