@@ -4,7 +4,7 @@ My solution for the Industrial Placement challenge
 <h3> Using the program </h3>
 <b>UsingUnidays</b> is added to allow a user to run tests on the systems.
 
-<b>The main method is used to generate a Price object </b>
+<b>The main method</b> is used to generate a Price object 
 <b><code>runExampleTests</code> is used to output the results of a series of test cases</b>
 <br/>   
 
