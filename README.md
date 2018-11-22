@@ -87,6 +87,7 @@ EEB            |£22.00   |£7.00           |£29.00</code></pre>
     testing("A");
     testing("ABBCCCDDEE");
     testing("EDCBAEDCBC");
+    
 }</pre></code>
 Produces output
 <pre><code>Baskets from runExampleTests()
