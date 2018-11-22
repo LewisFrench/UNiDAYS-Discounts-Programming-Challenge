@@ -78,17 +78,15 @@ EEB            |£22.00   |£7.00           |£29.00</code></pre>
 	runExampleTests(example, pricingRules);
 }</pre></code>
 
-<code><pre>
 
-public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
+<pre><code>public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
 
-	System.out.println("\n\nBaskets from runExampleTests()");
-	System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
-	testing("");
-	testing("A");
-	testing("ABBCCCDDEE");
-	testing("EDCBAEDCBC");
-	
+    System.out.println("\n\nBaskets from runExampleTests()");
+    System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
+    testing("");
+    testing("A");
+    testing("ABBCCCDDEE");
+    testing("EDCBAEDCBC");
 }</pre></code>
 Produces output
 <pre><code>Baskets from runExampleTests()
