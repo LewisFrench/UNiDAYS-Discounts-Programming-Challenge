@@ -32,18 +32,15 @@ BBBBCCC      |£50.00   |£0.00           |£50.00
 </code></pre>
 
 <h3>Example use</h3>
-<h3>Testing manually</h3>
-User adds items to baskets  
-<code><pre>
-public static void main(String[] args){
+<h4>Testing manually</h4>
+<code><pre>public static void main(String[] args){
+
 	PricingRules pricingRules = new PricingRules();
 	UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
 	Price result;
-		
-	//Outputs the price rules in a short table
+	
 	System.out.println(pricingRules.toString());
 		
-	// Item variables are declared
 	Item itemOne = new Item('E');
 	Item itemTwo = new Item('E');
 	Item itemThree = new Item('B');
@@ -64,13 +61,9 @@ public static void main(String[] args){
 	deliveryCharge = result.DeliveryCharge;
 	overallTotal = totalPrice + deliveryCharge;
 		
-	// Output added to display results, specified the means through which the basket was filled
-	System.out.println("\n\nBaskets from manual entry");
 	System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost"); // Headers of output table
-	// Stores string to display as a string from the manually-filled basket
+
 	String displayString = example.basketToString();
-	
-	// outputs the baskets and the corresponding pricing
 	testingOutput(displayString, result);
 	
 }</code></pre>
@@ -79,7 +72,31 @@ which produces output :
 <code>Baskets from manualTesting()
  Items          | Total   | Delivery Charge| Overall Cost
 EEB             |£22.00   |£7.00           |£29.00</code></pre>
+<h4>Using <code>runExampleTests</code></h4>
+<pre><code>public static void main(String[] args){
 
+	PricingRules pricingRules = new PricingRules();
+	UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
+	runExampleTests(example, pricingRules);
+}
+public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
+	// Outputs a series of headings to form a table once tests are run
+	System.out.println("\n\nBaskets from runExampleTests()");
+	System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
+	
+	testing("");
+	testing("A");
+	testing("ABBCCCDDEE");
+	testing("EDCBAEDCBC");
+}</code></pre>
+Produces output
+<pre><code>Baskets from runExampleTests()
+	Items           |Total    |Delivery Charge |Overall Cost
+	None            |£0.00    |£0.00           |£0.00         
+	A               |£8.00    |£7.00           |£15.00          
+	ABBCCCDDEE      |£55.00   |£0.00           |£55.00        
+	EDCBAEDCBC      |£55.00   |£0.00           |£55.00        
+}</code></pre>
 <h3>How I approached the program</h3>
 
 I approached this problem by looking at the example implementation snippet given on the project specification, which hinted at certain design structures. I started with smaller classes like <code>Price</code> and <code>Item</code>. 
