@@ -3,37 +3,29 @@ public class UseUnidays {
 		
 		PricingRules pricingRules = new PricingRules();
 		UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
+		Price result;
 		
 		//Outputs the price rules in a short table
 		System.out.println(pricingRules.toString());
+
 		
-		// Run the test cases provided on the GitHub
-		runExampleTests(example, pricingRules);
-		
-		// Runs the example implementation given on GitHub
-		manualTesting(example,pricingRules);
-		
-	}
-	
-	
-	public static void manualTesting(UnidaysDiscountChallenge example, PricingRules pricingRules){
 		// Variable declaration for example testing
 		Item itemOne = new Item('E');
 		Item itemTwo = new Item('E');
-		Price result;
+		Item itemThree = new Item('B');
+
 		double totalPrice;
 		double deliveryCharge;
 		@SuppressWarnings("unused") // Used to suppress warning from use of example code
 		double overallTotal;
 
-		/* Testing from GitHub specification example 
-		 * Runs code verbatim to demonstrate desired functionality
-		 */	
-		
+		// Testing from GitHub specification example 
+		// Runs code verbatim to demonstrate desired functionality		
 		example = new UnidaysDiscountChallenge(pricingRules);
 		
 		example.AddToBasket(itemOne);
 		example.AddToBasket(itemTwo);
+		example.AddToBasket(itemThree);
 
 		result = example.CalculateTotalPrice();
 		
@@ -42,27 +34,28 @@ public class UseUnidays {
 		overallTotal = totalPrice + deliveryCharge;
 		// end of example implementation from GitHub
 		
+		System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost"); // Headers of output table
+		// Stores string to display as a string from the manually-filled basket
+		String displayString = example.basketToString();
+		// outputs the baskets and the corresponding pricing
+		testingOutput(displayString, result);
+	
 		
-		// Output added to display results
-		System.out.println("\n\nBaskets from manualTesting()");
-		System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
-		testingOutput(example.basketToString(), result);
+		// method used to display algorithmic functionality of program using given test cases
+
+		runExampleTests(example, pricingRules);
 	}
-	
-	
-	
-	
-	
+		
 	 /* Efficient and simple method to test certain baskets
 	 *  Users write a string containing any combination of valid object types (A-->E)
-	 *  Method handles strings and calculates the price for each basket used 
-	 *  method to test efficiently, currently runs all example tests given in the GitHub specification*/
+	 *  Does not return the Price object for each string, but rather just outputs
+	 *  Does not affect usual functionality, simply used to generate output for a large number of rest cases*/
 	public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
 		//	Outputs a series of headings to form a table once tests are run
-		System.out.println("Baskets from runExampleTests()");
+		System.out.println("\n\nBaskets from runExampleTests()");
 		System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
 		
-		// Runs fast tests using string handling to separate item values
+		// Runs multiple tests and produces output table
 		testing("");
 		testing("A");
 		testing("B");
@@ -84,6 +77,7 @@ public class UseUnidays {
 		testing("ABBCCCDDEE");
 		testing("EDCBAEDCBC");
 	}
+
 	// Method used to separate items in strings from runExampleTests
 	public static void testing(String itemString){
 		// instantiate new instances of PricingRules and UnidaysDiscountChallenge
@@ -105,13 +99,13 @@ public class UseUnidays {
 		// Generates a table row for each of the strings entered
 		testingOutput(itemString,result);		
 	}
+		
 	
 	public static void testingOutput(String s, Price result){
 		// outputs "None" if the basket is empty in place of the items
 		if (s == ""){
 			s = "None";
 		}
-
 		// outputs a row of data to contribute to testing table
 		System.out.printf(String.format("\n%-16s", s) + result.toString());
 

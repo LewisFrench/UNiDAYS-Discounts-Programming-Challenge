@@ -48,8 +48,7 @@ public class PricingRules {
 	public String toString(){
 		String output = "Item\tPrice\n";
 		for (char key : rules.keySet()){
-			output +=(key + "\t£"+ rules.get(key)+"0\n");
-		}
+			output +=String.format("%-8s£%-8.2f\n",key,rules.get(key) );		}
 		
 		return output;
 		
