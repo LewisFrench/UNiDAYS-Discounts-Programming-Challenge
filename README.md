@@ -32,7 +32,8 @@ BBBBCCC      |£50.00   |£0.00           |£50.00</code></pre>
 
 <h3>Example use</h3>
 <h4>Generating basket manually</h4>
-<code><pre>public static void main(String[] args){
+<code><pre>
+   public static void main(String[] args){
 
 	PricingRules pricingRules = new PricingRules();
 	UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
@@ -64,7 +65,7 @@ BBBBCCC      |£50.00   |£0.00           |£50.00</code></pre>
 
 	String displayString = example.basketToString();
 	testingOutput(displayString, result);
-}</code></pre>
+    }</code></pre>
 which produces output :
 <pre><code>Baskets from manualTesting()
 Items          |Total    |Delivery Charge |Overall Cost
@@ -77,17 +78,17 @@ EEB            |£22.00   |£7.00           |£29.00</code></pre>
 	runExampleTests(example, pricingRules);
 }</pre></code>
 
-<code><pre>public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
+<code><pre>
+
+    public static void runExampleTests(UnidaysDiscountChallenge example, PricingRules pricingRules){
 	
 	System.out.println("\n\nBaskets from runExampleTests()");
 	System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost");
-		
-	// Runs fast tests using string handling to separate item values
 	testing("");
 	testing("A");
 	testing("ABBCCCDDEE");
 	testing("EDCBAEDCBC");
-}</pre></code
+    }</pre></code
 Produces output
 <pre><code>Baskets from runExampleTests()
 Items           |Total    |Delivery Charge |Overall Cost
