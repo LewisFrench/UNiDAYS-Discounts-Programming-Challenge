@@ -28,11 +28,10 @@ The method then runs <code>testing()</code> to iterate through the string entere
 The output generated from the program is given in a table format, as shown below :
 <pre><code>Baskets from runExampleTests()
 Items        |Total    |Delivery Charge |Overall Cost 
-BBBBCCC      |£50.00   |£0.00           |£50.00
-</code></pre>
+BBBBCCC      |£50.00   |£0.00           |£50.00</code></pre>
 
 <h3>Example use</h3>
-<h4>Testing manually</h4>
+<h4>Generating basket manually</h4>
 <code><pre>public static void main(String[] args){
 
 	PricingRules pricingRules = new PricingRules();
@@ -88,12 +87,11 @@ public static void runExampleTests(UnidaysDiscountChallenge example, PricingRule
 }</code></pre>
 Produces output
 <pre><code>Baskets from runExampleTests()
-	Items           |Total    |Delivery Charge |Overall Cost
-	None            |£0.00    |£0.00           |£0.00         
-	A               |£8.00    |£7.00           |£15.00          
-	ABBCCCDDEE      |£55.00   |£0.00           |£55.00        
-	EDCBAEDCBC      |£55.00   |£0.00           |£55.00        
-}</code></pre>
+Items           |Total    |Delivery Charge |Overall Cost
+None            |£0.00    |£0.00           |£0.00         
+A               |£8.00    |£7.00           |£15.00          
+ABBCCCDDEE      |£55.00   |£0.00           |£55.00        
+EDCBAEDCBC      |£55.00   |£0.00           |£55.00</code></pre>
 <h3>How I approached the program</h3>
 
 I approached this problem by looking at the example implementation snippet given on the project specification, which hinted at certain design structures. I started with smaller classes like <code>Price</code> and <code>Item</code>. 
