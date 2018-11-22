@@ -33,7 +33,7 @@ ABBCCCDDEE   |£55.00   |£0.00           |£55.00
 </code></pre>
 
 <h3>Example use</h3>
-<h3>Testing manually<h3/>
+<h3>Testing manually</h3>
 User adds items to baskets  
 <code><pre>
 public static void main(String[] args){
