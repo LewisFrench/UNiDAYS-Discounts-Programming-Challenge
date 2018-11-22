@@ -35,36 +35,36 @@ BBBBCCC      |£50.00   |£0.00           |£50.00</code></pre>
 <code><pre>
 public static void main(String[] args){
 
-	PricingRules pricingRules = new PricingRules();
-	UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
-	Price result;
-	
-	System.out.println(pricingRules.toString());
-	
-	Item itemOne = new Item('E');
-	Item itemTwo = new Item('E');
-	Item itemThree = new Item('B');
-	
-	double totalPrice;
-	double deliveryCharge;
-	double overallTotal;
-	
-	example = new UnidaysDiscountChallenge(pricingRules);
-	
-	example.AddToBasket(itemOne);
-	example.AddToBasket(itemTwo);
-	example.AddToBasket(itemThree);
+    PricingRules pricingRules = new PricingRules();
+    UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
+    Price result;
 
-	result = example.CalculateTotalPrice();
+    System.out.println(pricingRules.toString());
 
-	totalPrice = result.Total;
-	deliveryCharge = result.DeliveryCharge;
-	overallTotal = totalPrice + deliveryCharge;
+    Item itemOne = new Item('E');
+    Item itemTwo = new Item('E');
+    Item itemThree = new Item('B');
+
+    double totalPrice;
+    double deliveryCharge;
+    double overallTotal;
+
+    example = new UnidaysDiscountChallenge(pricingRules);
+
+    example.AddToBasket(itemOne);
+    example.AddToBasket(itemTwo);
+    example.AddToBasket(itemThree);
+ 
+    result = example.CalculateTotalPrice();
+  
+    totalPrice = result.Total;
+    deliveryCharge = result.DeliveryCharge;
+    overallTotal = totalPrice + deliveryCharge;
 
 	System.out.printf("%-16s%-10s%-1s%-11s", " Items", "| Total", "| Delivery Charge", "| Overall Cost"); // Headers of output table
 
-	String displayString = example.basketToString();
-	testingOutput(displayString, result);
+    String displayString = example.basketToString();
+    testingOutput(displayString, result);
 }</code></pre>
 which produces output :
 <pre><code>Baskets from manualTesting()
