@@ -1,12 +1,12 @@
 public class UseUnidays {
 	public static void main(String[] args){
 		
-		PricingRules pricingRules = new PricingRules();
-		UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(pricingRules);
+		final PricingRules PRICING_RULES = new PricingRules();
+		UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(PRICING_RULES);
 		Price result;
 		
 		//Outputs the price rules in a short table
-		System.out.println(pricingRules.toString());
+		System.out.println(PRICING_RULES.toString());
 
 		
 		// Variable declaration for example testing
@@ -21,7 +21,7 @@ public class UseUnidays {
 
 		// Testing from GitHub specification example 
 		// Runs code verbatim to demonstrate desired functionality		
-		example = new UnidaysDiscountChallenge(pricingRules);
+		example = new UnidaysDiscountChallenge(PRICING_RULES);
 		
 		example.AddToBasket(itemOne);
 		example.AddToBasket(itemTwo);
@@ -29,8 +29,8 @@ public class UseUnidays {
 
 		result = example.CalculateTotalPrice();
 		
-		totalPrice = result.Total;
-		deliveryCharge = result.DeliveryCharge;
+		totalPrice = result.getTotal();
+		deliveryCharge = result.getDeliveryCharge();
 		overallTotal = totalPrice + deliveryCharge;
 		// end of example implementation from GitHub
 		
@@ -43,7 +43,7 @@ public class UseUnidays {
 		
 		// method used to display algorithmic functionality of program using given test cases
 
-		runExampleTests(example, pricingRules);
+		runExampleTests(example, PRICING_RULES);
 	}
 		
 	 /* Efficient and simple method to test certain baskets

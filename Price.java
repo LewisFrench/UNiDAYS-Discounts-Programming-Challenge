@@ -1,8 +1,14 @@
 public class Price {
 	// public variables such that they can be accessed by (object).DeliveryCharge
-	public double Total;
-	public double DeliveryCharge;
+	private double Total;
+	private double DeliveryCharge;
 	
+	public double getTotal() {
+		return Total;
+	}
+	public double getDeliveryCharge() {
+		return DeliveryCharge;
+	}
 	public Price (double Total, double DeliveryCharge){
 		this.Total = Total;
 		this.DeliveryCharge = DeliveryCharge;
